@@ -11,24 +11,27 @@ class FilmsManagerTest {
         manager.addFilm("Movie2");
         manager.addFilm("Movie3");
         String[] actual = manager.findAll();
-        String[] expected = {"Movie1","Movie2", "Movie3"};
+        String[] expected = {"Movie1", "Movie2", "Movie3" };
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldAddOneMovie() {
         FilmsManager manager = new FilmsManager();
         manager.addFilm("Movie1");
         String[] actual = manager.findAll();
-        String[] expected = {"Movie1"};
+        String[] expected = {"Movie1" };
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldAddZeroMovie() {
         FilmsManager manager = new FilmsManager();
         String[] actual = manager.findAll();
-        String[] expected = { };
+        String[] expected = {};
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldAddThreeMoviePrev() {
         FilmsManager manager = new FilmsManager();
@@ -36,9 +39,10 @@ class FilmsManagerTest {
         manager.addFilm("Movie2");
         manager.addFilm("Movie3");
         String[] actual = manager.findLast();
-        String[] expected = {"Movie3","Movie2", "Movie1"};
+        String[] expected = {"Movie3", "Movie2", "Movie1" };
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldAddFiveMoviePrev() {
         FilmsManager manager = new FilmsManager();
@@ -48,10 +52,11 @@ class FilmsManagerTest {
         manager.addFilm("Movie4");
         manager.addFilm("Movie5");
         String[] actual = manager.findLast();
-        String[] expected = {"Movie5", "Movie4", "Movie3","Movie2", "Movie1"};
+        String[] expected = {"Movie5", "Movie4", "Movie3", "Movie2", "Movie1" };
         Assertions.assertArrayEquals(expected, actual);
     }
-//   @Test
+
+    //   @Test
 //    public void shouldAddThreeFromFiveMoviePrev() {
 //        FilmsManager manager = new FilmsManager(3);
 //        manager.addFilm("Movie1");
@@ -67,7 +72,7 @@ class FilmsManagerTest {
     public void shouldAddZeroMoviePrev() {
         FilmsManager manager = new FilmsManager();
         String[] actual = manager.findLast();
-        String[] expected = { };
+        String[] expected = {};
         Assertions.assertArrayEquals(expected, actual);
     }
 
